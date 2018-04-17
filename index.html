@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="init()">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>rs14022 - Cieto disku plānošanas algoritmu: FCFS, SSTF, SCAN, C-SCAN, LOOK vizualizācijas</title>
+</head>
+	
+<body>
+
+	<div class="col-md-4 col-md-offset-4" style="padding-top: 50px;">
+		<h1>Konfigurācija</h1>
+
+			<div><p>Virknes sākuma pozīcija : <input type="number" id="sPoz" min="1" max="650"></p>
+				<p>Ierakstu skaits (max=100) : <input type="number" id="aLength" min="1" max="100"></p>
+				<div  align="middle">
+						<button class="btn btn-info" onclick="Randomizer()" title="ͥner贠nejau𵠰oz朗ju virkni">Randomize</button>
+				</div>
+				<br>
+				<p>Gadījuma veidā ģenerētās virknes vērtības : <input maxLength="400" size="65" type="text" id="aValues"></p>
+				<div  align="middle">
+						<button class="btn btn-success" onclick="RunCode()" title="ͥner贠lietot㫡 izv譧to virkni">Run</button>
+				</div>
+			</div>
+			<br>
+	
+	</div>		
+	<div class="col-md-12" style=" text-align: center;">
+		<div class="col-lg-4">
+			
+			<h2>FCFS</h2>
+			<output style="font-size: 26px;" name="FCFSval" id="FCFSval">0</output><p>soļi</p>
+
+			<canvas id="myCanvasFCFS" width="400" height="300" style="border:1px solid #c3c3c3;"></canvas>
+
+			<div style="font-family: Verdana; font-size: 12px;">
+			</div>
+		</div>
+
+		<div class="col-lg-4">
+			<h2>SSTF</h2>
+			<output style="font-size: 26px;" name="SSTFval" id="SSTFval">0</output><p>soļi</p>
+			
+			<canvas id="myCanvasSSTF" width="400" height="300" style="border:1px solid #c3c3c3;"></canvas>
+
+			<div style="font-family: Verdana; font-size: 12px;">
+			</div>
+		</div>
+
+		<div class="col-lg-4">
+			<h2>SCAN</h2>
+			<output style="font-size: 26px;" name="SCANval" id="SCANval">0</output><p>soļi</p>
+			
+
+			<canvas id="myCanvasSCAN" width="400" height="300" style="border:1px solid #c3c3c3;"></canvas>
+
+			<div style="font-family: Verdana; font-size: 12px;">
+			</div>
+		</div>
+
+		<div class="col-lg-6">
+			<h2>C-SCAN</h2>
+			<output style="font-size: 26px;" name="CSCANval" id="CSCANval">0</output><p>soļi</p>
+			<p>Lēciens starp minimālo (0) un maksimālo (400) vērtību netiek skaitīts klāt soļu skaitam!</p>
+			<canvas id="myCanvasCSCAN" width="400" height="300" style="border:1px solid #c3c3c3;"></canvas>
+
+			<div style="font-family: Verdana; font-size: 12px;">
+			</div>
+		</div>
+
+		<div class="col-lg-6">
+			<h2>C-LOOK</h2>
+			<output style="font-size: 26px;" name="CLOOKval" id="CLOOKval">0</output><p>soļi</p>
+			<p>Lēciens starp minimālo un maksimālo vērtību netiek skaitīts klāt soļu skaitam!</p>
+			
+			<canvas id="myCanvasCLOOK" width="400" height="300" style="border:1px solid #c3c3c3;"></canvas>
+
+			<div style="font-family: Verdana; font-size: 12px;">
+			</div>
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript" src="js/hdd.js"></script>
+</body>
+
+</html>
